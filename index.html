@@ -12,14 +12,28 @@
             background-color: blueviolet;
             justify-content: center;
             align-items: center;
+            font-size: 45px;
         }
         
         #inizio{  
-    position: relative;
-    width: 15vw;
-    height: 7vh;
-    background-color: aqua;
-    border-radius: 10px;
+             position: relative;
+             width: 15vw;
+            height: 7vh;
+            background-color: aqua;
+            border-radius: 10px;
+        }
+        input[type="text"] {
+            width: 300px;
+            height: 40px;
+            font-size: 18px;
+            
+        }
+        input[type="submit"], input[type="button"] {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: yellowgreen;
+            border: none;
+            outline: none;
         }
     </style>
 </head>
@@ -27,7 +41,7 @@
 <body>
     <div>
     <h1 id="fine"></h1>
-    <h2 id="titolo">Quiz per i più forti</h2>
+    <h2 id="titolo">Quiz per i migliori</h2>
     <div class="quiz">
         <div id="start">
             <input type="button" id="inizio" value="Inizia il quiz">
@@ -35,8 +49,8 @@
         <div class="box hidden">
             <h2 id="domanda"></h2>
             <form id="quizForm">
-                <input type="text" name="rispostaUtente" placeholder="Scrivi la tua risposta" required />
-                <input type="submit" value="Rispondi" />
+                <input type="text" name="rispostaUtente" placeholder="Inserisci la tua risposta" required />
+                <input type="submit" value="Invia" />
             </form>
             <div class="ndomanda">
                 <h2 class="score">Punteggio: <span id="punteggio">0</span></h2>
@@ -103,7 +117,7 @@
 
         let questions = [
             { "testo_domanda": "Qual è la capitale dell'Italia?", "risposta_corretta": "roma", "punteggio": 2 },
-            { "testo_domanda": "Come si chiama Scanni?", "risposta_corretta": "frank", "punteggio": 4 },
+            { "testo_domanda": "Qual'è la capitale della Cina", "risposta_corretta": "pechino", "punteggio": 4 },
             { "testo_domanda": "Qual è la capitale del Brasile?", "risposta_corretta": "brasilia", "punteggio": 3 },
             { "testo_domanda": "Qual è la capitale della Francia?", "risposta_corretta": "parigi", "punteggio": 1 },
             { "testo_domanda": "Qual è la capitale dell'Albania?", "risposta_corretta": "tirana", "punteggio": 5 }
